@@ -12,17 +12,20 @@ class window:
     self.win.move(y,x)
   def draw_text(self,text):
     self.win.addstr(text)
-  def draw_text_refresh(self,text):
-    self.win.addstr(text)
+  def refresh(self):
     self.win.refresh()
+  def box(self):
+    self.win.box()
 
 def main(stdscr):
   stdscr.clear()
 
   win1 = window(10,10,10,10)
   win1.set_cursor(1,1)
-  win1.draw_text_refresh("welcome aboard")
-  
+  win1.draw_text("hi")
+  win1.box()
+  win1.refresh()
+
   stdscr.refresh()
   stdscr.getch()
 

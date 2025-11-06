@@ -1,3 +1,5 @@
+import curses
+
 class Window:
   def __init__(self,height,width,y,x):
     self.height = height

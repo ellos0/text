@@ -1,6 +1,5 @@
 import curses
 
-import line
 import window
 from window import Window
 
@@ -10,12 +9,8 @@ def main(stdscr):
 
     win = Window(10, 40, 2, 2)
     
-    line.set_cursor_n(win,[1,1])
-    line.insert_text(win, "hello ")
-    line.set_cursor_n(win, [7,1])
-    line.insert_text(win, "world!")
+    window.write(win, 1, 1, "hello, world!\n 2nd line")
 
-    window.cursor(win)
     window.box(win)
 
     stdscr.refresh()

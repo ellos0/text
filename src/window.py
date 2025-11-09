@@ -1,5 +1,4 @@
 import curses
-import line
 
 #window logic and functions
 
@@ -9,7 +8,6 @@ class Window:
     self.width = width
     self.y = y
     self.x = x
-    self.edit = line.Edit(buffer,cursor)
     self.win = curses.newwin(height,width,y,x)
 
 def box(w):
